@@ -158,7 +158,7 @@ export const experiences = [
       "Focused on performance optimization to enhance overall application responsiveness and usability using ReactJS, HTML5, CSS3, JavaScript, and React Router to streamline operational processes.",
       "Designed and implemented a fully responsive user interface using Tailwind CSS, ensuring an optimized and seamless user experience across devices.",
       "Implemented a mock backend system using local JSON for data storage and API simulation.",
-      `Personally deployed the project on Netlify for development and testing purposes, while the main domain for official testing and quality assurance is hosted at <a href="https://test.pbsl.com.bd" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">test.pbsl.com.bd</a>.`,
+      `Deployed the official website of Prime Bank Securities Ltd. <a href="https://pbsl.com.bd" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">pbsl.com.bd</a>.`,
     ],
     skills: [
       "HTML",
