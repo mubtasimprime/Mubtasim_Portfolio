@@ -31,6 +31,7 @@ import csharpLogo from "./assets/tech_logo/csharp.png";
 import reactRouter from "./assets/tech_logo/react-router.png";
 import framerMotion from "./assets/tech_logo/framer-motion.png";
 import daisyUI from "./assets/tech_logo/daisyui-logo.png";
+import Roommate from "./assets/roommate.png";
 
 // Experience Section Logo's
 import webverseLogo from "./assets/company_logo/webverse_logo.png";
@@ -62,7 +63,7 @@ export const SkillsInfo = [
       { name: "JavaScript", logo: javascriptLogo },
       { name: "React JS", logo: reactjsLogo },
       { name: "React Router", logo: reactRouter },
-      // { name: "Next JS", logo: nextjsLogo },
+      { name: "Next JS", logo: nextjsLogo },
       { name: "Tailwind CSS", logo: tailwindcssLogo },
       { name: "DaisyUI", logo: daisyUI },
       { name: "Bootstrap", logo: bootstrapLogo },
@@ -154,10 +155,9 @@ export const experiences = [
     company: "Prime Bank Securities Ltd.",
     date: "May 2025 – August 2025 | Dhaka, Bangladesh",
     desc: [
-      "Proposed and designed the website’s architecture, user flow, and UI/UX from scratch.",
-      "Focused on performance optimization to enhance overall application responsiveness and usability using ReactJS, HTML5, CSS3, JavaScript, and React Router to streamline operational processes.",
-      "Designed and implemented a fully responsive user interface using Tailwind CSS, ensuring an optimized and seamless user experience across devices.",
-      "Implemented a mock backend system using local JSON for data storage and API simulation.",
+      "Proposed and designed the website’s architecture, implemented a fully responsive user interface, ensuring an optimized and seamless user experience across devices.",
+      "Focused on performance optimization to enhance overall application usability using ReactJS, Tailwind CSS, JavaScript, and React Router to streamline operational processes.",
+      "Implemented a mock backend system with plans to replace it with a fully functional backend in future development.",
       `Deployed the official website of Prime Bank Securities Ltd. <a href="https://pbsl.com.bd" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">pbsl.com.bd</a>.`,
     ],
     skills: [
@@ -223,11 +223,32 @@ export const projects = [
       "Framer Motion",
     ],
     github:
-      "https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-MubtasimPrime",
+      "https://github.com/MubtasimPrime/Library_Management_System_client_side",
     webapp: "https://library-management-6a442.web.app/",
   },
   {
     id: 1,
+    title: "Roommate Finder",
+    description:
+      "A modern web application for joining a trusted community and matching with roommates who share your lifestyle, habits, and interests. The platform streamlines the roommate search process by allowing users to create profiles, list available rooms, and find compatible matches with ease.",
+    image: Roommate,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React JS",
+      "React Router",
+      "Firebase Authentication",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Framer Motion",
+    ],
+    github: "https://github.com/MubtasimPrime/Roommate_Finder_client_side",
+    webapp: "https://roommate-finder-caea5.web.app/",
+  },
+  {
+    id: 2,
     title: "App Store",
     description:
       "Discover the world’s most innovative apps all in one place. From productivity to gaming, find, download, and enjoy apps that make life smarter and more fun.",
@@ -246,17 +267,17 @@ export const projects = [
     webapp: "https://appify-mubtasim.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Doctors point",
     description:
       "Doctors Point connects you with trusted medical professionals whenever you need them. Find expert care, book appointments, and manage your health—all in one place.",
     image: movierecLogo,
     tags: ["React JS", "HTML", "CSS", "JavaScript", "Firebase", "React Router"],
-    github: "",
+    github: "https://github.com/MubtasimPrime/Doctors_Point_React",
     webapp: "https://doctors-point-prime.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Auction Gallery",
     description:
       "Built a project highlighting React skills (Click on Bid Now).",
@@ -273,7 +294,7 @@ export const projects = [
     webapp: "https://auction-gallery-prime.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Ecommerce Website Multipage",
     description:
       "Shop the latest products from the comfort of your home with ease and confidence. Enjoy a seamless online shopping experience with fast delivery and secure payments.",
@@ -285,7 +306,7 @@ export const projects = [
       "https://mubtasimprime.github.io/Ecommerce_Website_-HTML-CSS-JavaScript-/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Browse4Pets",
     description:
       "Browse Pet brings you closer to the perfect furry friend or pet essentials you need. Explore, discover, and care for pets all in one convenient place",
