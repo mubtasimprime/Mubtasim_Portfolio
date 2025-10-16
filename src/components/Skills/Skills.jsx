@@ -31,7 +31,7 @@ const Skills = () => (
 
           {/* Skill Items - 3 per row on larger screens */}
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-2 2xl:grid-cols-3 gap-3 w-full">
             {category.skills.map((skill) => (
               <div
                 key={skill.name}
