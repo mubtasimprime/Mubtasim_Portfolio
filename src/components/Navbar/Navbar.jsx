@@ -7,21 +7,19 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll and change navbar background
+  // Detect scroll for navbar background
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll function
+  // Smooth scroll to section
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
-
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -38,15 +36,23 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-[6vw] md:px-[10vw] lg:px-[18vw] ${
         isScrolled
-          ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md"
+          ? "bg-[#050414]/70 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className="flex justify-between items-center text-white py-4">
         {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
+        <div
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+          className="text-lg sm:text-xl md:text-2xl font-semibold cursor-pointer flex items-center space-x-1"
+        >
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Md. Mubtasim</span>
           <span className="text-[#8245ec]">/</span>
@@ -55,11 +61,11 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8 text-gray-300 font-medium">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
+              className={`cursor-pointer transition duration-200 hover:text-[#8245ec] ${
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
@@ -76,73 +82,75 @@ const Navbar = () => {
             href="https://github.com/MubtasimPrime"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition duration-300 transform hover:scale-110"
           >
-            <FaGithub size={24} />
+            <FaGithub size={22} />
           </a>
           <a
             href="https://www.linkedin.com/in/mubtasim-fuad-rafiq/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition duration-300 transform hover:scale-110"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={22} />
           </a>
         </div>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#8245ec] cursor-pointer transition-transform duration-300"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#8245ec] cursor-pointer transition-transform duration-300"
               onClick={() => setIsOpen(true)}
             />
           )}
         </div>
       </div>
 
-      {/* Mobile Menu Items */}
-      {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
-            {menuItems.map((item) => (
-              <li
-                key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
-              >
-                <button onClick={() => handleMenuItemClick(item.id)}>
-                  {item.label}
-                </button>
-              </li>
-            ))}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/codingmastr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin size={24} />
-              </a>
-            </div>
-          </ul>
-        </div>
-      )}
+      {/* Mobile Menu */}
+      <div
+        className={`absolute top-[72px] left-0 w-full bg-[#050414]/90 backdrop-blur-md rounded-b-2xl overflow-hidden md:hidden transition-all duration-500 ease-in-out ${
+          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center space-y-5 py-6 text-gray-300 font-medium">
+          {menuItems.map((item) => (
+            <li
+              key={item.id}
+              className={`cursor-pointer hover:text-[#8245ec] transition duration-200 ${
+                activeSection === item.id ? "text-[#8245ec]" : ""
+              }`}
+            >
+              <button onClick={() => handleMenuItemClick(item.id)}>
+                {item.label}
+              </button>
+            </li>
+          ))}
+          <div className="flex space-x-6 pt-4 border-t border-gray-700 w-4/5 justify-center">
+            <a
+              href="https://github.com/MubtasimPrime"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition duration-300 transform hover:scale-110"
+            >
+              <FaGithub size={22} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mubtasim-fuad-rafiq/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition duration-300 transform hover:scale-110"
+            >
+              <FaLinkedin size={22} />
+            </a>
+          </div>
+        </ul>
+      </div>
     </nav>
   );
 };

@@ -1,16 +1,13 @@
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
-import profileImage from "../../assets/Fuad.png";
+import profileImage from "../../assets/Mubtasim.png";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
-    >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+    <section className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
         {/* Left Side */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+        <div className="lg:w-1/2 text-center lg:text-left mt-8 md:mt-0">
           {/* Greeting */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
@@ -57,8 +54,9 @@ const About = () => {
             DOWNLOAD CV
           </a>
         </div>
+
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <div className="lg:w-1/2 flex justify-center md:justify-end">
           <Tilt
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
@@ -67,11 +65,13 @@ const About = () => {
             transitionSpeed={1000}
             gyroscope={true}
           >
-            <img
-              className="w-[30rem] h-auto"
-              src={profileImage}
-              alt="Mubtasim Fuad"
-            />
+            <div className="relative w-[18rem] sm:w-[22rem] md:w-[26rem] lg:w-[30rem] rounded-full p-[5px] bg-gradient-to-r from-[#8245ec] to-[#a855f7] shadow-[0_0_30px_#8245ec66]">
+              <img
+                className="w-full h-full object-cover rounded-full border-[4px] border-[#111] shadow-lg"
+                src={profileImage}
+                alt="Mubtasim Fuad"
+              />
+            </div>
           </Tilt>
         </div>
       </div>
