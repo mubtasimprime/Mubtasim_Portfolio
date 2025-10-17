@@ -265,7 +265,7 @@ export const projects = [
       "JavaScript",
       "Firebase Authentication",
     ],
-    github: "",
+    github: "https://github.com/mubtasimprime/Appify_Appstore_Firebase_Auth",
     webapp: "https://appify-mubtasim.netlify.app/",
     challenges: [
       "Structuring app categories and search filters efficiently.",
