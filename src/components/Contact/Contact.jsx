@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[10vw] md:px-[7vw] lg:px-[12vw] text-white"
+      className="flex flex-col items-center justify-center py-24 px-[8vw] sm:px-[10vw] lg:px-[12vw] text-white"
     >
       <ToastContainer />
 
@@ -38,7 +38,7 @@ const Contact = () => {
       </div>
 
       {/* Main Layout */}
-      <div className="flex flex-col lg:flex-row gap-12 w-full max-w-5xl">
+      <div className="flex flex-col lg:flex-row gap-10 w-full max-w-5xl">
         {/* LEFT SIDE - Info */}
         <div className="flex-1 bg-[#0d081f] p-8 rounded-lg shadow-lg border border-gray-700">
           <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
@@ -49,23 +49,26 @@ const Contact = () => {
           </p>
 
           <div className="space-y-6">
-            {/* <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-purple-500 text-xl" />
-              <span className="text-gray-300">+058 58 25 333</span>
-            </div> */}
-
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-purple-500 text-xl" />
-              <span className="text-gray-300">mubtasimfuadrafiq@gmail.com</span>
+            {/* Email */}
+            <div className="flex items-start gap-3">
+              <FaEnvelope className="text-purple-500 text-2xl sm:text-xl md:text-2xl flex-shrink-0 mt-1" />
+              <span className="text-gray-300 text-sm sm:text-base break-words">
+                mubtasimfuadrafiq@gmail.com
+              </span>
             </div>
 
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-purple-500 text-xl" />
-              <span className="text-gray-300">Mirpur, Dhaka, Bangladesh</span>
+            {/* Location */}
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className="text-purple-500 text-2xl sm:text-xl md:text-2xl flex-shrink-0 mt-1" />
+              <span className="text-gray-300 text-sm sm:text-base">
+                Mirpur, Dhaka, Bangladesh
+              </span>
             </div>
-            <div className="flex items-center gap-4">
-              <FaClock className="text-purple-500 text-xl" />
-              <span className="text-gray-300">
+
+            {/* Availability */}
+            <div className="flex items-start gap-3">
+              <FaClock className="text-purple-500 text-2xl sm:text-xl md:text-2xl flex-shrink-0 mt-1" />
+              <span className="text-gray-300 text-sm sm:text-base">
                 Currently available for MERN stack projects & tech
                 collaborations
               </span>
@@ -89,33 +92,33 @@ const Contact = () => {
               name="user_name"
               placeholder="Your Name"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 text-sm sm:text-base"
             />
             <input
               type="email"
               name="user_email"
               placeholder="Your Email"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 text-sm sm:text-base"
             />
             <input
               type="text"
               name="subject"
               placeholder="Subject"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 text-sm sm:text-base"
             />
             <textarea
               name="message"
               placeholder="Message"
               rows="4"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500 text-sm sm:text-base"
             />
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition text-sm sm:text-base"
             >
               Send Message
             </button>
