@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { projects } from "../../constants";
 
 const Work = () => {
@@ -6,6 +6,32 @@ const Work = () => {
 
   const handleOpenModal = (project) => setSelectedProject(project);
   const handleCloseModal = () => setSelectedProject(null);
+  const [visibleCount, setVisibleCount] = useState(6);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCount(4);
+      } else {
+        setVisibleCount(6);
+      }
+    };
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
+
+  const handleToggle = () => {
+    if (showAll) {
+      setShowAll(false);
+      setVisibleCount(window.innerWidth < 768 ? 4 : 6);
+    } else {
+      // Show all projects
+      setShowAll(true);
+      setVisibleCount(projects.length);
+    }
+  };
 
   return (
     <section
@@ -24,7 +50,7 @@ const Work = () => {
 
       {/* Projects Grid */}
       <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
+        {projects.slice(0, visibleCount).map((project) => (
           <div
             key={project.id}
             onClick={() => handleOpenModal(project)}
@@ -67,6 +93,18 @@ const Work = () => {
           </div>
         ))}
       </div>
+
+      {/* See More / See Less Button */}
+      {projects.length > (window.innerWidth < 768 ? 4 : 6) && (
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={handleToggle}
+            className="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold py-2 px-6 rounded-md hover:opacity-90 transition"
+          >
+            {showAll ? "See Less" : "See More"}
+          </button>
+        </div>
+      )}
 
       {/* Modal */}
       {selectedProject && (
