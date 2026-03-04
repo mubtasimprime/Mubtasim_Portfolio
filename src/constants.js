@@ -133,7 +133,7 @@ export const experiences = [
     id: 1,
     img: btfLogo,
     role: "Frontend Developer Intern (Ongoing)",
-    company: "Prime Bank Securities Ltd.",
+    company: "Bangladesh Thalassemia Foundation",
     date: "December 21, 2025 - | Dhaka, Bangladesh",
     desc: [
       "Proposed and designed the website’s architecture, implemented a fully responsive user interface, ensuring an optimized and seamless user experience across devices.",
