@@ -18,17 +18,21 @@ const Myself = () => {
             <div className="space-y-6">
               {/* Introduction Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <p className="text-blue-100 leading-relaxed mb-4">
+                <p className="text-blue-100 leading-relaxed mb-2">
                   Enthusiastic and detail-oriented{" "}
                   <span className="text-white font-semibold bg-blue-500/30 px-1 rounded">
                     Full-Stack MERN Developer
                   </span>{" "}
                   holding a{" "}
                   <span className="text-white font-semibold">
-                    Bachelor's degree in Computer Science & Engineering (CGPA
-                    3.79)
+                    Bachelor&apos;s degree in CSE
                   </span>{" "}
                   from <span className="text-white font-semibold">BUBT</span>.
+                  Currently pursuing{" "}
+                  <span className="text-white font-semibold">
+                    an M.Sc. in CSE at Bangladesh University of Professionals
+                    (BUP).
+                  </span>
                 </p>
 
                 <p className="text-blue-100 leading-relaxed">
@@ -45,12 +49,17 @@ const Myself = () => {
                   <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                   Technical Expertise
                 </h3>
-                <p className="text-blue-100 leading-relaxed mb-4">
+                <p className="text-blue-100 leading-relaxed mb-2">
                   Over time, I mastered technologies like{" "}
                   <span className="text-white font-semibold">React.js</span>,{" "}
                   <span className="text-white font-semibold">Node.js</span>,{" "}
-                  <span className="text-white font-semibold">Express.js</span>,
-                  and <span className="text-white font-semibold">MongoDB</span>.
+                  <span className="text-white font-semibold">Express.js</span>,{" "}
+                  <span className="text-white font-semibold">MongoDB</span>,{" "}
+                  <span className="text-white font-semibold">NextJs</span>, and{" "}
+                  <span className="text-white font-semibold">MySQL</span>,{" "}
+                  <span className="text-white font-semibold">Redux</span>.{" "}
+                  {/* <span className="text-white font-semibold">CSS</span>, and{" "}
+                  <span className="text-white font-semibold">Tailwind CSS</span>. */}
                 </p>
 
                 <p className="text-blue-100 leading-relaxed">
@@ -87,7 +96,7 @@ const Myself = () => {
                 <p className="text-blue-100 leading-relaxed">
                   Outside of programming, I enjoy watching tech-related content,
                   exploring new tools, playing video games and spending time
-                  designing and refining UI layouts it's where creativity meets
+                  designing and refining UI layouts it&apos;s where creativity meets
                   logic for me.
                 </p>
               </div>
@@ -103,6 +112,7 @@ const Myself = () => {
                     "Node.js",
                     "Express.js",
                     "MongoDB",
+                    "NextJS",
                     "JavaScript",
                     "Frontend",
                   ].map((tech) => (

@@ -3,7 +3,7 @@ import { education } from "../../constants";
 const Education = () => (
   <section
     id="education"
-    className="py-24 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient"
+    className="py-24 px-[7vw] md:px-[7vw] lg:px-[25vw] font-sans bg-skills-gradient"
   >
     {/* Section Title */}
     <div className="text-center mb-8">
@@ -15,7 +15,7 @@ const Education = () => (
     </div>
 
     {/* Education Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 py-10">
       {education.map((edu) => (
         <div
           key={edu.id}
@@ -37,7 +37,7 @@ const Education = () => (
           <h4 className="text-md sm:text-sm text-gray-300 mb-1">
             {edu.school}
           </h4>
-          <p className="text-sm text-gray-400 mb-1">CGPA: {edu.grade}</p>
+          <p className="text-sm text-gray-400 mb-1">CGPA: {edu.grade ?? "N/A"}</p>
           <p className="text-sm text-gray-400">{edu.date}</p>
 
           {/* Description */}

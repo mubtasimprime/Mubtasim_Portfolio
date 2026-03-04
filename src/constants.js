@@ -29,6 +29,8 @@ import framerMotion from "./assets/tech_logo/framer-motion.png";
 import daisyUI from "./assets/tech_logo/daisyui-logo.png";
 import Roommate from "./assets/roommate.png";
 import News from "./assets/work_logo/news.png";
+import Redux from "./assets/tech_logo/redux.png";
+import Bup from "./assets/education_logo/bup-logo.png";
 
 // Experience Section Logo's
 import newtonschoolLogo from "./assets/company_logo/logo.png";
@@ -61,6 +63,7 @@ export const SkillsInfo = [
       { name: "Bootstrap", logo: bootstrapLogo },
       { name: "Framer Motion", logo: framerMotion },
       { name: "Material UI", logo: materialuiLogo },
+      { name: "Redux", logo: Redux },
     ],
   },
   {
@@ -130,11 +133,11 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: glaLogo,
-    school: "Bangladesh University of Business & Technology (BUBT)",
-    date: "2020 - 2024",
-    grade: "3.79/4",
-    degree: "Bachelor of Computer Science Engineering",
+    img: vpsLogo,
+    school: "Dhaka Shiksha Board Laboratory School and College",
+    date: "2016",
+    grade: "5/5",
+    degree: "Secondary School Certificate",
   },
   {
     id: 1,
@@ -146,11 +149,20 @@ export const education = [
   },
   {
     id: 2,
-    img: vpsLogo,
-    school: "Dhaka Shiksha Board Laboratory School and College",
-    date: "2016",
-    grade: "5/5",
-    degree: "Secondary School Certificate",
+    img: glaLogo,
+    school: "Bangladesh University of Business & Technology (BUBT)",
+    date: "2020 - 2024",
+    grade: "3.79/4",
+    degree: "B.Sc. in Computer Science & Engineering",
+  },
+
+  {
+    id: 3,
+    img: Bup,
+    school: "Bangladesh University of Professionals (BUP)",
+    date: "2026 - Present",
+    // grade: "3.85/4",
+    degree: "M.Sc. in Computer Science & Engineering (Ongoing)",
   },
 ];
 
