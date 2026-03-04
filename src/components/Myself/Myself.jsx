@@ -18,7 +18,7 @@ const Myself = () => {
             <div className="space-y-6">
               {/* Introduction Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <p className="text-blue-100 leading-relaxed mb-2">
+                <p className="text-blue-100 leading-relaxed mb-2 text-sm sm:text-base">
                   Enthusiastic and detail-oriented{" "}
                   <span className="text-white font-semibold bg-blue-500/30 px-1 rounded">
                     Full-Stack MERN Developer
@@ -35,7 +35,7 @@ const Myself = () => {
                   </span>
                 </p>
 
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                   My programming journey began out of curiosity—what started as
                   small experiments with HTML and JavaScript soon grew into a
                   deep passion for building full-fledged web applications that
@@ -45,11 +45,11 @@ const Myself = () => {
 
               {/* Technical Skills Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-white font-semibold mb-3 flex items-center gap-2">
+                <h3 className="text-white font-semibold mb-3 flex items-center gap-2 text-sm sm:text-base">
                   <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                   Technical Expertise
                 </h3>
-                <p className="text-blue-100 leading-relaxed mb-2">
+                <p className="text-blue-100 leading-relaxed mb-2 text-sm sm:text-base">
                   Over time, I mastered technologies like{" "}
                   <span className="text-white font-semibold">React.js</span>,{" "}
                   <span className="text-white font-semibold">Node.js</span>,{" "}
@@ -62,7 +62,7 @@ const Myself = () => {
                   <span className="text-white font-semibold">Tailwind CSS</span>. */}
                 </p>
 
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                   I particularly enjoy working on the{" "}
                   <span className="text-white font-semibold bg-green-500/30 px-1 rounded">
                     frontend
@@ -74,11 +74,11 @@ const Myself = () => {
 
               {/* Passion Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-white font-semibold mb-3 flex items-center gap-2">
+                <h3 className="text-white font-semibold mb-3 flex items-center gap-2 text-sm sm:text-base">
                   <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   My Passion
                 </h3>
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                   I find real joy in transforming ideas into interactive,
                   production-ready solutions—especially when I get to solve
                   challenging problems and optimize performance. Creating
@@ -89,20 +89,20 @@ const Myself = () => {
 
               {/* Interests Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-white font-semibold mb-3 flex items-center gap-2">
+                <h3 className="text-white font-semibold mb-3 flex items-center gap-2 text-sm sm:text-base">
                   <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
                   Beyond Coding
                 </h3>
-                <p className="text-blue-100 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                   Outside of programming, I enjoy watching tech-related content,
                   exploring new tools, playing video games and spending time
-                  designing and refining UI layouts it&apos;s where creativity meets
-                  logic for me.
+                  designing and refining UI layouts it&apos;s where creativity
+                  meets logic for me.
                 </p>
               </div>
               {/* Tech Highlights */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+                <h3 className="text-white font-semibold mb-4 flex items-center gap-2 text-sm sm:text-base">
                   <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                   Tech Stack Focus
                 </h3>
@@ -118,7 +118,7 @@ const Myself = () => {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="bg-blue-500/30 text-blue-100 px-3 py-1 rounded-full text-sm border border-blue-400/30"
+                      className="bg-blue-500/30 text-blue-100 px-3 py-1 rounded-full text-sm border border-blue-400/30 shadow-[0_0_10px_1px_rgba(130,69,236,0.2)]"
                     >
                       {tech}
                     </span>
