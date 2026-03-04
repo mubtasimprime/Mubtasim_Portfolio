@@ -3,51 +3,51 @@ import { experiences } from "../../constants";
 const Experience = () => (
   <section
     id="experience"
-    className="py-24 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient"
+    className="py-24 px-[7vw] md:px-[7vw] lg:px-[30vw] font-sans bg-skills-gradient"
   >
     {/* Section Title */}
     <div className="text-center mb-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-white">EXPERIENCE</h2>
       <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
+      <p className="text-gray-400 mt-4 text-lg font-semibold mx-auto">
         A collection of my work experience and the roles I have taken in various
         organizations
       </p>
     </div>
 
     {/* Experience Cards */}
-    <div className="flex flex-wrap gap-6 py-10 justify-between">
+    <div className="flex flex-wrap gap-6 py-0 justify-between">
       {experiences.map((experience) => (
         <div
           key={experience.id}
           className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 w-full rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
         >
           {/* Header */}
-          <div className="flex items-center space-x-4 mb-4">
+          <div className="flex items-center justify-center space-x-4 mb-0">
             <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
               <img
                 src={experience.img}
                 alt={experience.company}
-                className="w-full h-full object-cover"
+                className="w-12 h-12 object-contain object-center mx-auto"
               />
             </div>
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-white">
+              <h3 className="text-xl sm:text-[22px] font-semibold text-white">
                 {experience.role}
               </h3>
-              <h4 className="text-md sm:text-sm text-gray-300">
+              <h4 className="text-md sm:text-base text-gray-300">
                 {experience.company}
               </h4>
-              <p className="text-sm text-gray-500">{experience.date}</p>
+              <p className="text-base text-gray-500">{experience.date}</p>
             </div>
           </div>
 
           {/* Description */}
-          <ul className="list-disc pl-6 text-gray-300 space-y-2">
+          {/* <ul className="list-disc pl-6 text-gray-300 space-y-2">
             {experience.desc.map((point, idx) => (
               <li key={idx} dangerouslySetInnerHTML={{ __html: point }} />
             ))}
-          </ul>
+          </ul> */}
 
           {/* Skills */}
           {/* <div className="mt-4">

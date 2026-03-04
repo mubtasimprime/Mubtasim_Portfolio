@@ -34,6 +34,7 @@ import Bup from "./assets/education_logo/bup-logo.png";
 
 // Experience Section Logo's
 import newtonschoolLogo from "./assets/company_logo/logo.png";
+import btfLogo from "./assets/company_logo/btf-logo.png";
 
 // Education Section Logo's
 import glaLogo from "./assets/education_logo/bubt.png";
@@ -108,6 +109,32 @@ export const experiences = [
     role: "Software Developer Intern",
     company: "Prime Bank Securities Ltd.",
     date: "May 2025 – August 2025 | Dhaka, Bangladesh",
+    desc: [
+      "Proposed and designed the website’s architecture, implemented a fully responsive user interface, ensuring an optimized and seamless user experience across devices.",
+      "Focused on performance optimization to enhance overall application usability using ReactJS, Tailwind CSS, JavaScript, and React Router to streamline operational processes.",
+      "Implemented a mock backend system with plans to replace it with a fully functional backend in future development.",
+      `Deployed the official website of Prime Bank Securities Ltd. <a href="https://pbsl.com.bd" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">pbsl.com.bd</a>.`,
+    ],
+    skills: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React Router",
+      "TailwindCSS",
+      "DaisyUI",
+      "Framer Motion",
+      "Swiper",
+      "AOS",
+      "react-icons",
+      "Figma",
+    ],
+  },
+  {
+    id: 1,
+    img: btfLogo,
+    role: "Frontend Developer Intern (Ongoing)",
+    company: "Prime Bank Securities Ltd.",
+    date: "December 2026 – Present | Dhaka, Bangladesh",
     desc: [
       "Proposed and designed the website’s architecture, implemented a fully responsive user interface, ensuring an optimized and seamless user experience across devices.",
       "Focused on performance optimization to enhance overall application usability using ReactJS, Tailwind CSS, JavaScript, and React Router to streamline operational processes.",
