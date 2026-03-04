@@ -24,15 +24,15 @@ const Experience = () => (
         >
           {/* Header */}
           <div className="flex items-center justify-center space-x-4 mb-0">
-            <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
+            <div className="w-16 h-16 bg-white rounded-md overflow-hidden flex items-center justify-center p-2">
               <img
                 src={experience.img}
                 alt={experience.company}
-                className="w-12 h-12 object-contain object-center mx-auto"
+                className="max-w-full max-h-full object-contain"
               />
             </div>
             <div>
-              <h3 className="text-xl sm:text-[22px] font-semibold text-white">
+              <h3 className="text-xl sm:text-xl font-semibold text-white">
                 {experience.role}
               </h3>
               <h4 className="text-md sm:text-base text-gray-300">

@@ -37,7 +37,10 @@ const Education = () => (
           <h4 className="text-md sm:text-sm text-gray-300 mb-1">
             {edu.school}
           </h4>
-          <p className="text-sm text-gray-400 mb-1">CGPA: {edu.grade ?? "N/A"}</p>
+          <p className="text-sm text-gray-400 mb-1">
+            {edu.id === 0 || edu.id === 1 ? "GPA: " : "CGPA: "}
+            {edu.grade ?? "N/A"}
+          </p>
           <p className="text-sm text-gray-400">{edu.date}</p>
 
           {/* Description */}
