@@ -134,7 +134,7 @@ export const experiences = [
     img: btfLogo,
     role: "Frontend Developer Intern (Ongoing)",
     company: "Prime Bank Securities Ltd.",
-    date: "December 21, 2025 | Dhaka, Bangladesh",
+    date: "December 21, 2025 - | Dhaka, Bangladesh",
     desc: [
       "Proposed and designed the website’s architecture, implemented a fully responsive user interface, ensuring an optimized and seamless user experience across devices.",
       "Focused on performance optimization to enhance overall application usability using ReactJS, Tailwind CSS, JavaScript, and React Router to streamline operational processes.",
